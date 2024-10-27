@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Age <= 28.5\ngini = 0.422\nsamples = 100.0%\nvalue = [0.698, 0.302]\nclass = Yes", fillcolor="#f0b88f"] ;
+1 [label="DiabetesPedigreeFunction <= 0.67\ngini = 0.299\nsamples = 51.0%\nvalue = [0.817, 0.183]\nclass = Yes", fillcolor="#eb9d65"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Age <= 25.5\ngini = 0.241\nsamples = 41.7%\nvalue = [0.86, 0.14]\nclass = Yes", fillcolor="#e99559"] ;
+1 -> 2 ;
+3 [label="(...)", fillcolor="#C0C0C0"] ;
+2 -> 3 ;
+30 [label="(...)", fillcolor="#C0C0C0"] ;
+2 -> 30 ;
+59 [label="BMI <= 30.65\ngini = 0.466\nsamples = 9.2%\nvalue = [0.63, 0.37]\nclass = Yes", fillcolor="#f4cbad"] ;
+1 -> 59 ;
+60 [label="(...)", fillcolor="#C0C0C0"] ;
+59 -> 60 ;
+61 [label="(...)", fillcolor="#C0C0C0"] ;
+59 -> 61 ;
+82 [label="BloodPressure <= 81.0\ngini = 0.488\nsamples = 49.0%\nvalue = [0.577, 0.423]\nclass = Yes", fillcolor="#f8ddca"] ;
+0 -> 82 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+83 [label="BMI <= 25.05\ngini = 0.465\nsamples = 35.0%\nvalue = [0.632, 0.368]\nclass = Yes", fillcolor="#f4caac"] ;
+82 -> 83 ;
+84 [label="(...)", fillcolor="#C0C0C0"] ;
+83 -> 84 ;
+91 [label="(...)", fillcolor="#C0C0C0"] ;
+83 -> 91 ;
+160 [label="BMI <= 30.05\ngini = 0.494\nsamples = 14.0%\nvalue = [0.447, 0.553]\nclass = No", fillcolor="#d9ecfa"] ;
+82 -> 160 ;
+161 [label="(...)", fillcolor="#C0C0C0"] ;
+160 -> 161 ;
+174 [label="(...)", fillcolor="#C0C0C0"] ;
+160 -> 174 ;
+}
