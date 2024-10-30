@@ -12,10 +12,10 @@ org_df = pd.read_csv('amr_ds.csv')
 
 # label_df = org_df.loc[:, org_df.columns != 'Not_MDR']
 # feat_df = org_df['Not_MDR']
-X = org_df[['Ampicillin', 'Penicillin']]
-y = org_df['Not_MDR']
+label_df = org_df[['Ampicillin', 'Penicillin']]
+feat_df = org_df['Not_MDR']
 
-x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(label_df, feat_df, test_size=0.25, random_state=42)
 #Create Naive Bayes Model
 model = BernoulliNB()
 model.fit(x_train, y_train)

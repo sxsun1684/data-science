@@ -65,3 +65,10 @@ plot_sequence(hmm, steps=10, plot_type='matrix')
 # Predict hidden states
 lp, most_probable_states = hmm.predict(prediction_type='viterbi', symbols=['Walk','Shop','Clean'])
 print(most_probable_states)
+# Create Hidden Markov Model
+hmm = HiddenMarkovModel(transition_matrix, observation_matrix, hidden_states, observation_symbols)
+
+# Visualize results
+matplotlib.pyplot.ion()
+plot_graph(hmm)
+plot_sequence(hmm, steps=10, plot_type='matrix')
